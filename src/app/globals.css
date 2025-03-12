@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #121578;
+  --secondary-color: #683cbd;
+  --tertiary-color: #151c340f;
+}
+body {
+  background-color: #fefeff;
+}
+input {
+  @apply w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] duration-300;
+}
+.fadeInUp {
+  opacity: 0; /* العنصر مخفي في البداية */
+  animation: fadeInUp 0.5s linear forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animationColor {
+  animation: animationColor 1s linear forwards;
+}
+
+@keyframes animationColor {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: var(--primary-color);
+  }
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.text{padding-top:600px;}
+.mostafa{background-image: url('/bg.jpg');
+  background-size: cover; /* لجعل الصورة تغطي الشاشة بالكامل */
+  background-position: center; /* لتوسيط الصورة */
+  background-repeat: no-repeat; /* لمنع تكرار الصورة */}
+/* إخفاء الأسهم في متصفح Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.checkbox-base {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  border: 1.2px solid rgba(62, 52, 200, 0.1);
+  border-radius: 8px;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 15px;
+  display: flex;
+  position: relative;
+  box-shadow: 1px 1px 35px rgba(198, 211, 255, 0.28);
+}
+.checkbox-base.active {
+  background-color: rgb(255, 241, 241);
+  transform: translate3d(0px, 0px, 0px) scale3d(1.05, 1.05, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  border-color: #e1292b;
+}
+
+.checkbox-icon {
+  z-index: 9;
+  width: 55px;
+  height: 55px;
+  background-color: rgba(91, 58, 204, 0.05);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  display: flex;
+  position: relative;
+}
+
+.checkbox-base-text {
+  display: flex;
+  align-items: center;
+  z-index: 9;
+  cursor: pointer;
+  position: relative;
+}
